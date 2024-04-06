@@ -1,17 +1,40 @@
 import { Group } from "./group";
-import { User } from "./user";
 
 export class Expense{
-    private expense_id: number;
-    private expense_amount: number;
-    private expense_group: Group;
-    private expense_users: Array<User>;
 
-    constructor($expense_id: number, $expense_amount: number, $expense_group: Group, $expense_users: Array<User>) {
-            this.expense_id = $expense_id;
-            this.expense_group = $expense_group;
-            this.expense_users = $expense_users;
+
+    /**
+     * Getter $expense_group_id
+     * @return {number}
+     */
+	public get $expense_group_id(): number {
+		return this.expense_group_id;
 	}
+
+    /**
+     * Getter $group
+     * @return {Group}
+     */
+	public get $group(): Group {
+		return this.group;
+	}
+
+    /**
+     * Setter $expense_group_id
+     * @param {number} value
+     */
+	public set $expense_group_id(value: number) {
+		this.expense_group_id = value;
+	}
+
+    /**
+     * Setter $group
+     * @param {Group} value
+     */
+	public set $group(value: Group) {
+		this.group = value;
+	}
+
     /**
      * Getter $expense_id
      * @return {number}
@@ -26,22 +49,6 @@ export class Expense{
      */
 	public get $expense_amount(): number {
 		return this.expense_amount;
-	}
-
-    /**
-     * Getter $expense_group
-     * @return {Group}
-     */
-	public get $expense_group(): Group {
-		return this.expense_group;
-	}
-
-    /**
-     * Getter $Users
-     * @return {Array<User>}
-     */
-	public get $Users(): Array<User> {
-		return this.Users;
 	}
 
     /**
@@ -60,20 +67,16 @@ export class Expense{
 		this.expense_amount = value;
 	}
 
-    /**
-     * Setter $expense_group
-     * @param {Group} value
-     */
-	public set $expense_group(value: Group) {
-		this.expense_group = value;
-	}
-
-    /**
-     * Setter $Users
-     * @param {Array<User>} value
-     */
-	public set $Users(value: Array<User>) {
-		this.Users = value;
+    private expense_id: number;
+    private expense_amount: number;
+    private expense_group_id: number;
+    private group: Group;
+    
+    constructor($expense_id: number, $expense_amount: number, $expense_group_id: number, $group: Group) {
+            this.expense_id = $expense_id;
+            this.expense_amount = $expense_amount;
+            this.expense_group_id = $expense_group_id;
+            this.group = $group;    
 	}
     
 }

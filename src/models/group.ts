@@ -1,5 +1,3 @@
-import { User } from "./user";
-
 export class Group{
 
     private groupID: number;
@@ -31,14 +29,6 @@ export class Group{
 	}
 
     /**
-     * Getter $group_admin
-     * @return {User}
-     */
-	public get $group_admin(): User {
-		return this.group_admin;
-	}
-
-    /**
      * Setter $groupID
      * @param {number} value
      */
@@ -62,20 +52,10 @@ export class Group{
 		this.date_created = value;
 	}
 
-    /**
-     * Setter $group_admin
-     * @param {User} value
-     */
-	public set $group_admin(value: User) {
-		this.group_admin = value;
-	}
-    private group_admin: User;
-
-    constructor($groupID: number, $group_name: string, $date_created: Date, $group_admin: User) {
+    constructor($groupID: number, $group_name: string, $date_created: Date) {
 		this.groupID = $groupID;
 		this.group_name = $group_name;
 		this.date_created = $date_created;
-		this.group_admin = $group_admin;
 	}
     
 
