@@ -1,6 +1,6 @@
 {
 	"compilerOptions": {
-		"target": "es5",
+		"target": "es2017",
 		"module": "commonjs",
 		"moduleResolution": "node",
 		"useDefineForClassFields": true,
@@ -30,7 +30,10 @@
 		"downlevelIteration": true,
 		"declaration": true,
 
-		"pretty": true
+		"pretty": true,
+
+		"types": ["node", "sqlite3"],
+		"typeRoots": ["./node_modules/@types"]
 	},
 	"include": [
 		"typings/**/*",
