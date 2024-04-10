@@ -1,5 +1,4 @@
 
-import { User } from '../models/user';
 import { UserService } from '../services/UserService';
 
 export class UserController{
