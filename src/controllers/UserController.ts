@@ -18,14 +18,14 @@ export class UserController{
           }
       }
 
-      public updateUser(req: Request): void{
-        try{
-            let user_data = req.body;
-            this.user_service.updateUser(user_data);
+    //   public updateUser(req: Request): void{
+    //     try{
+    //         let user_data = req.body;
+    //         this.user_service.updateUser(user_data);
         
-        } catch (error) {
-            console.log("update user request failed");
-          }
-      }
+    //     } catch (error) {
+    //         console.log("update user request failed");
+    //       }
+    //   }
       
 }
