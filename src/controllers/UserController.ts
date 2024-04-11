@@ -18,14 +18,13 @@ export class UserController{
           }
       }
 
-    //   public updateUser(req: Request): void{
-    //     try{
-    //         let user_data = req.body;
-    //         this.user_service.updateUser(user_data);
-        
-    //     } catch (error) {
-    //         console.log("update user request failed");
-    //       }
-    //   }
+      public deleteUser(req: Request): void{
+        try{
+            let user_id = req.body;
+            this.user_service.delete_user(user_id);
+        } catch (error) {
+            console.log("delete user request failed");
+          }
+      }
       
 }
